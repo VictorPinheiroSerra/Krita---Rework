@@ -38,12 +38,12 @@ public class Spaceshooter_Enemy : MovableObject
     {
         if (goingUp)
         {
-            rb.velocity = moveSpeed * Vector2.up;
+            rb.linearVelocity = moveSpeed * Vector2.up;
             if (transform.position.y >= screenBounds.y - objectBounds.y)
                 goingUp = false;
         }
         else
-            rb.velocity = moveSpeed * Vector2.down;
+            rb.linearVelocity = moveSpeed * Vector2.down;
         if (transform.position.y <= -screenBounds.y + objectBounds.y)
             goingUp = true;
 

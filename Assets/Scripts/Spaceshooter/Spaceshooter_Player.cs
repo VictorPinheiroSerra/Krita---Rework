@@ -22,7 +22,7 @@ public class Spaceshooter_Player : MovableObject
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = movement * moveSpeed;
+        rb.linearVelocity = movement * moveSpeed;
     }
 
     public void Move(InputAction.CallbackContext context)
